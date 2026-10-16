@@ -367,3 +367,33 @@ p { margin: 0 0 1em; }
 .doc li { margin: 0 0 0.55em; }
 .doc li::marker { color: var(--primary); }
 .doc strong { color: var(--text); font-weight: 700; }
+
+/* ---------- Desktop polish (phone layout above is unchanged) ---------- */
+
+@media (min-width: 900px) {
+  :root { --gutter: 40px; }
+  body { font-size: 1.125rem; }
+  .wrap { max-width: 1200px; }
+
+  .lede { font-size: 1.35rem; }
+  .card h3 { font-size: 1.45rem; }
+  .card--wide h3 { font-size: 1.8rem; }
+  .card--wide p { font-size: 1.2rem; }
+  .note { font-size: 1.0625rem; }
+  .beta .small { font-size: 1rem; }
+  .fine { font-size: 0.95rem; }
+  .site-header nav a { font-size: 1rem; }
+  .doc { max-width: 820px; }
+  .doc h2 { font-size: 1.5rem; }
+
+  /* A thin underline below the baseline instead of a band through the letters. */
+  .hero h1 .hl {
+    background: none;
+    padding: 0;
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 0.07em;
+    text-underline-offset: 0.16em;
+    text-decoration-skip-ink: none;
+  }
+}
